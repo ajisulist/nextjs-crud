@@ -1,0 +1,51 @@
+@use '../../styles/shared/color.scss';
+@use '../../styles/shared/spacing.scss';
+
+.container {
+  overflow: visible;
+}
+
+.label {
+  margin-bottom: spacing.$spacing-xs;
+}
+
+.select {
+  margin-bottom: spacing.$spacing-sm;
+
+  :global .RSelect__control {
+    border: 2px solid color.$color-border;
+    transition: 0.3s;
+    border-radius: 5px;
+    box-shadow: none;
+    &:hover {
+      border: 2px solid darken(color.$color-border, 20%);
+      border-radius: 5px;
+    }
+  }
+  :global .RSelect__control--is-focused {
+    border: 2px solid darken(color.$color-border, 20%);
+    border-radius: 5px;
+  }
+
+  :global .RSelect__menu-list {
+    border-radius: 5px;
+    border: 2px solid darken(color.$color-border, 30%);
+  }
+
+  :global .RSelect__option {
+    &:hover {
+      background-color: color.$color-green-20;
+    }
+  }
+  :global .RSelect__option--is-selected {
+    background-color: color.$color-green !important;
+
+    &:hover {
+      background-color: color.$color-green;
+    }
+  }
+
+  :global .RSelect__option--is-focused {
+    background-color: color.$color-green-20;
+  }
+}

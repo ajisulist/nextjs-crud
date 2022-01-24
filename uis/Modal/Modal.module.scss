@@ -1,0 +1,36 @@
+@use '../../styles/shared/color.scss';
+@use '../../styles/shared/spacing.scss';
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  width: clamp(50%, 700px, 90%);
+  margin: auto;
+  padding: spacing.$spacing-md;
+  border-radius: 5px;
+  flex-direction: column;
+  background-color: color.$color-white;
+}
+
+.modalTitle {
+  border-bottom: color.$color-border;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  margin-bottom: spacing.$spacing-md;
+  padding-bottom: spacing.$spacing-sm;
+}
+
+.modalContent {
+  overflow: visible;
+}

@@ -1,0 +1,50 @@
+@use '../../styles/shared/typography.scss';
+@use '../../styles/shared/color.scss';
+
+// size rules
+.md {
+  @include typography.typography-size();
+}
+
+.sm {
+  @include typography.typography-size(typography.$typography-size-sm);
+}
+
+.lg {
+  @include typography.typography-size(typography.$typography-size-lg);
+}
+
+.xl {
+  @include typography.typography-size(typography.$typography-size-xl);
+}
+
+.xxl {
+  @include typography.typography-size(typography.$typography-size-xxl);
+}
+
+// color rules
+.black {
+  @include typography.typography-color(color.$color-black);
+}
+
+.white {
+  @include typography.typography-color(color.$color-white);
+}
+
+.green {
+  @include typography.typography-color(color.$color-green);
+}
+
+// color rules
+.light {
+  @include typography.typography-weight(typography.$typography-weight-light);
+  letter-spacing: 0.05rem;
+}
+
+.regular {
+  @include typography.typography-weight(typography.$typography-weight-regular);
+}
+
+.bold {
+  @include typography.typography-weight(typography.$typography-weight-bold);
+}

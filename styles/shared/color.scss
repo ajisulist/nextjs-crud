@@ -1,0 +1,30 @@
+@function tint($color, $percentage) {
+  @return mix($color, white, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix($color, black, $percentage);
+}
+
+$color-green: #038767;
+$color-green-50: tint($color-green, 50%);
+$color-green-20: tint($color-green, 20%);
+$color-green-10: tint($color-green, 10%);
+$color-green-5: tint($color-green, 5%);
+
+$color-red: #c33c54;
+
+$color-yellow: #f7cb15;
+
+$color-blue: #414288;
+
+$color-black: #334041;
+$color-black-50: tint($color-black, 50%);
+
+$color-white: #fffbff;
+$color-white-80: shade($color-white, 90%);
+
+// Default theme colors
+$color-typography: $color-black;
+$color-border: $color-green-20;
+$color-shadow: $color-black;

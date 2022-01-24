@@ -1,0 +1,39 @@
+@use './color.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+$typography-family: 'Lato', -apple-system, BlinkMacSystemFont, Ubuntu, sans-serif;
+
+// Size
+$typography-size-sm: 10px;
+$typography-size-md: 14px;
+$typography-size-lg: 18px;
+$typography-size-xl: 22px;
+$typography-size-xxl: 26px;
+
+// Weight
+$typography-weight-light: 300;
+$typography-weight-regular: 400;
+$typography-weight-bold: 700;
+
+@mixin typography-size($size: $typography-size-md) {
+  font-size: $size;
+}
+
+@mixin typography-color($color: color.$color-typography) {
+  color: $color;
+}
+
+@mixin typography-weight($weight: $typography-weight-regular) {
+  font-weight: $weight;
+}
+
+@mixin typography($color: color.$color-typography, $size: $typography-size-md, $weight: $typography-weight-regular) {
+  font-family: $typography-family;
+  @include typography-color($color);
+  @include typography-size($size);
+  @include typography-weight($weight);
+}
+
+@mixin typography-default {
+  @include typography();
+}

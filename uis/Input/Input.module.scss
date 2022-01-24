@@ -1,0 +1,24 @@
+@use '../../styles/shared/color.scss';
+@use '../../styles/shared/spacing.scss';
+
+.input {
+  width: 100%;
+  border: 2px solid color.$color-border;
+  transition: 0.3s;
+  outline: none;
+  padding: spacing.$spacing-sm;
+  border-radius: 5px;
+  margin-bottom: spacing.$spacing-sm;
+  &:focus,
+  &:hover {
+    border-radius: 5px;
+    border: 2px solid darken(color.$color-border, 20%);
+  }
+  &::placeholder {
+    color: color.$color-green-50;
+  }
+}
+
+.label {
+  margin-bottom: spacing.$spacing-xs;
+}

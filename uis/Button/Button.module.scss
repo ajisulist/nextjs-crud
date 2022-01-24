@@ -1,0 +1,47 @@
+@use '../../styles/shared/color.scss';
+@use '../../styles/shared/spacing.scss';
+@use '../../styles/shared/typography.scss';
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background: darken($bg, 5%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: darken($bg, 15%);
+  }
+}
+
+.button {
+  @include typography.typography($color: color.$color-white, $weight: typography.$typography-weight-bold);
+  text-decoration: none;
+  padding: spacing.$spacing-sm spacing.$spacing-md;
+  border-radius: 5px;
+  border: none;
+  white-space: nowrap;
+}
+
+.green {
+  @include button-bg(color.$color-green);
+}
+
+.white {
+  @include typography.typography-color($color: color.$color-typography);
+  @include button-bg(color.$color-white-80);
+}
+
+.buttonContent {
+  overflow: visible;
+}
+
+.buttonIcon {
+  align-items: center;
+  justify-content: center;
+  margin-right: spacing.$spacing-xs;
+  overflow: visible;
+}
+
+.loading {
+  opacity: 0.6;
+}

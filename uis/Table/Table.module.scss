@@ -1,0 +1,59 @@
+@use '../../styles/shared/color.scss';
+@use '../../styles/shared/spacing.scss';
+
+$table-border-width: 1px;
+$table-border-width-thick: 2px;
+
+@mixin table-border(
+  $top: 0px,
+  $right: 0px,
+  $bottom: 0px,
+  $left: 0px,
+  $color: color.$color-border,
+  $width: $table-border-width
+) {
+  border-width: $top $right $bottom $left;
+  border-style: solid;
+  border-color: $color;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  td,
+  th {
+    padding: spacing.$spacing-sm spacing.$spacing-md;
+  }
+
+  thead {
+    tr {
+      color: color.$color-green-50;
+      &:last-child {
+        th {
+          @include table-border(
+            $bottom: $table-border-width-thick,
+            $color: color.$color-green-50,
+            $width: $table-border-width
+          );
+          letter-spacing: 2px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        @include table-border($bottom: $table-border-width, $color: color.$color-green-50, $width: $table-border-width);
+      }
+    }
+  }
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+}
