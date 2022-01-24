@@ -1,0 +1,35 @@
+@use '../../../styles/shared/spacing.scss';
+
+.tableWrapper {
+  position: relative;
+  overflow: auto;
+}
+
+.stickyColumn {
+  position: sticky;
+  background-color: white;
+  left: 0;
+  min-width: 100px;
+}
+
+.antiWrap {
+  white-space: nowrap;
+  width: 1%;
+}
+
+.header {
+  align-items: center;
+}
+
+.headerIcon {
+  margin-right: spacing.$spacing-sm;
+  overflow: hidden;
+}
+
+.formButtonContainer {
+  justify-content: flex-end;
+}
+
+.formSubmitButton {
+  margin-left: spacing.$spacing-sm;
+}

@@ -1,0 +1,10 @@
+@use '../../styles/shared/spacing.scss';
+
+.title {
+  margin-bottom: spacing.$spacing-md;
+}
+
+.container {
+  margin-top: spacing.$spacing-xl;
+  padding: spacing.$spacing-md;
+}
